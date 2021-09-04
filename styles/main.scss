@@ -3,60 +3,58 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   ul {
-      li {
-          list-style:none;
-      }
+    li {
+      list-style: none;
+    }
   }
   a {
-      text-decoration: none;
+    text-decoration: none;
   }
 }
 
 header {
-    background: #0096A1;
-    height: 75px;
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    
-    .active {
-        background: #000;
+    top: -5px;
+  background: #0096a1;
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+
+  .active {
+    background: #000;
+  }
+  .nav {
+    padding-top: 20px;
+    .logo {
+      display: flex;
+      justify-content: start;
+      align-items: start;
     }
-    .nav {
-        padding-top: 20px;
-        .logo {
-            display: flex;
-            justify-content: start;
-            align-items: start;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      padding: 0 10px;
+      padding-top: 3px;
+
+      a {
+        text-transform: uppercase;
+        color: #fff;
+        &:hover {
+          color: #3ae388;
+          transition: 0.3s;
         }
+      }
     }
-    ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        
-        
-        li {
-            padding: 0 10px;
-            padding-top: 3px;
-            
-            
-            a {
-                text-transform: uppercase;
-                color: #fff;
-                &:hover {
-                    color: #3ae388;
-                    transition: 0.3s;
-                }
-            }
-        }
-    }
+  }
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin-top: 70px;
+    padding-top: 100px;
   height: 100vh;
   background: linear-gradient(90deg, #36c1ce 0%, #556270 100%);
   &-image {
@@ -69,9 +67,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    &::after {
+        content: "CRACK VER.";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        background: #F83131;
+        border-radius: 100%;
+        position: relative;
+        color: #fff;
+        top:-200px;
+
+    }
   }
   &-content {
     span {
+      
+        position: relative;
+        top: -3px;
       letter-spacing: 0.3px;
       background-color: #3ae388;
       font-size: 12px;
@@ -147,6 +162,7 @@ header {
     }
   }
   &-achievements {
+      
   }
   &-info {
     padding-top: 200px;
@@ -221,17 +237,18 @@ header {
 }
 
 .partners {
-    padding-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   &-item {
-      &__image {
-          height: 100px;
-          width: auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+    &__image {
+      height: 100px;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__content {
-        padding-top: 20px;
+      padding-top: 20px;
       font-size: 14px;
       line-height: 20px;
       display: flex;
@@ -244,6 +261,125 @@ header {
       }
     }
   }
+}
+
+.download {
+    h3 {
+        position: relative;
+        top: 150px;
+        color: #424D56;
+    }
+  &-table {
+      
+    .box {
+      border-top: 1px solid #333333;
+       
+      .title {
+        padding: 11px 0;
+        font-size: 20px;
+        line-height: 24px;
+        color: #5d666f;
+      }
+      .small-title {
+        font-size: 17px;
+        line-height: 24px;
+        /* identical to box height, or 141% */
+        
+        
+        color: #5D666F;
+        span {
+            font-size: 16px;
+        }
+      }
+    }
+  }
+  &-content {
+      
+      &__card {
+        &-header {
+            background: #2FA6B1;
+            height: 54px;
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+            color: #fff;
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 15px;
+                font-weight: 300;
+            }
+        }
+        &-item {
+            background: #dfefef;
+            
+            p {
+                padding-top: 5px;
+                display: flex;
+                justify-content: center;
+                color: #424D56;
+                line-height: 20px;
+                font-size: 17px;
+                font-weight: normal;
+            }
+            span {
+                display: flex;
+                justify-content: center;
+                font-size: 13px;
+                line-height: 19px;
+                color: #008193;
+                padding-bottom: 10px;
+            }
+        }
+        &-footer {
+            margin-bottom: 50px;
+            background: #dfefef;
+            height: 110px;
+            width: 195.5px;
+            position: relative;
+            left: 19.5px;
+            display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 0px 0px 20px 20px;
+            .green-btn {
+                background: #3AE388;
+                border: none;
+                padding: 6px 20px;
+                border-radius: 20px;
+                color: #fff;
+                &:hover {
+                    transition: 0.3s;
+                    background: #fff;
+                    color: gray;
+                }
+                
+                
+
+
+            }
+        }
+      }
+  }
+}
+
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #3B3B3B;
+    &-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-adress {
+        text-align: center;
+        span {
+            color: #fff;
+            font-weight: 300;
+        }
+    }
 }
 
 .outline-btn {
@@ -273,4 +409,14 @@ header {
     background: #3b3b3b;
     color: #fff;
   }
+}
+.blue {
+    background: #DFEFEF;
+    width: 196px;
+}
+
+.agree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
